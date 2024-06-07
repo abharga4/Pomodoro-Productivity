@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Pomodoro Productivity</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pomodoro Productivity</h1>
+      <p id="current-time"></p>
+    </header>
+    <main>
+      <div class="timer">
+        <span id="minutes">25</span>:<span id="seconds">00</span>
+      </div>
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="task-input">
+        <input type="text" id="task" placeholder="Enter task">
+        <button id="add-task">Add Task</button>
+      </div>
+      <ul id="task-list"></ul>
+      <div class="pomodoro-count">
+        <p>Pomodoros Completed: <span id="pomodoro-count">0</span></p>
+      </div>
+    </main>
+    <footer>
+      <button id="settings-button">Settings</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
