@@ -1,0 +1,42 @@
+/* Add styles for your popup here */
+
+body {
+  font-family: Times New Roman, sans-serif;
+}
+
+.container {
+  width: 300px;
+  padding: 20px;
+}
+
+header, main, footer {
+  margin-bottom: 20px;
+}
+
+.timer {
+  text-align: center;
+  font-size: 2em;
+}
+
+.controls button {
+  margin: 5px;
+}
+
+.task-input, .calendar {
+  margin-top: 10px;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#task-list li {
+  padding: 5px 0;
+}
+
+.calendar-session {
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
