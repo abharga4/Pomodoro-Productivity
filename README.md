@@ -1,2 +1,2 @@
 # Pomodoro-Productivity
-Intended to help enhance personal productivity. 
+The Pomodoro Productivity Chrome Extension is a tool designed to help users manage their time using the Pomodoro technique. This extension allows for customizable schedules, accommodating different productivity periods such as morning, afternoon, and evening. Users can add, track, and manage tasks effectively, and the extension provides progress tracking and notifications to keep users informed about session changes and completions. The user interface is elegantly designed with responsive HTML and CSS, ensuring compatibility across various screen sizes. The project is available on GitHub, providing accessibility for other developers and users to contribute and benefit from this productivity tool.
