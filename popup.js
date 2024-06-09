@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const shortBreakDurationInput = document.getElementById('short-break-duration');
     const longBreakDurationInput = document.getElementById('long-break-duration');
     const saveSettingsButton = document.getElementById('save-settings');
+    const settingsSavedAlert = document.getElementById('settings-saved-alert');
 
     let timer;
     let timerType = 'work'; // 'work', 'shortBreak', 'longBreak'
@@ -102,52 +103,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add task
-    addTaskButton.addEventListener('click', () => {
-        const task = taskInput.value.trim();
-        if (task) {
-            const li = document.createElement('li');
-            li.textContent = task;
-            taskList.appendChild(li);
-            taskInput.value = '';
-            
-            // Save task to storage
-            chrome.storage.sync.get({ tasks: [] }, (result) => {
-                const tasks = result.tasks;
-                tasks.push(task);
-                chrome.storage.sync.set({ tasks });
-            });
-        }
-    });
-
-    // Load tasks from storage
-    chrome.storage.sync.get({ tasks: [] }, (result) => {
-        result.tasks.forEach(task => {
-            const li = document.createElement('li');
-            li.textContent = task;
-            taskList.appendChild(li);
-        });
-    });
-
-    // Save settings
-    saveSettingsButton.addEventListener('click', () => {
-        const workDuration = workDurationInput.value;
-        const shortBreakDuration = shortBreakDurationInput.value;
-        const longBreakDuration = longBreakDurationInput.value;
-
-        chrome.storage.sync.set({
-            workDuration,
-            shortBreakDuration,
-            longBreakDuration
-        }, () => {
-            alert('Settings saved!');
-            if (timerType === 'work') {
-                remainingTime = workDuration * 60;
-            } else if (timerType === 'shortBreak') {
-                remainingTime = shortBreakDuration * 60;
-            } else if (timerType === 'longBreak') {
-                remainingTime = longBreakDuration * 60;
-            }
-            updateTimeDisplay();
-        });
-    });
-});
+    addTaskButton.add
