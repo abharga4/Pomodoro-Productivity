@@ -1,39 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Pomodoro Productivity</title>
+    <title>Pomodoro Productivity</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Pomodoro Productivity</h1>
-      <p id="current-time"></p>
-    </header>
-    <main>
-      <div class="timer">
-        <span id="minutes">25</span>:<span id="seconds">00</span>
-      </div>
-      <div class="controls">
-        <button id="start">Start</button>
-        <button id="pause">Pause</button>
-        <button id="reset">Reset</button>
-      </div>
-      <div class="task-input">
-        <input type="text" id="task" placeholder="Enter task">
-        <button id="add-task">Add Task</button>
-      </div>
-      <ul id="task-list"></ul>
-      <div class="pomodoro-count">
-        <p>Pomodoros Completed: <span id="pomodoro-count">0</span></p>
-      </div>
-    </main>
-    <footer>
-      <button id="settings-button">Settings</button>
-    </footer>
-  </div>
-  <script src="popup.js"></script>
+    <div class="container">
+        <h1>Pomodoro Productivity</h1>
+        <div id="timer">
+            <span id="time">25:00</span>
+            <button id="start-timer">Start</button>
+            <button id="reset-timer">Reset</button>
+        </div>
+        <div id="task-manager">
+            <h2>Task Manager</h2>
+            <input type="text" id="new-task" placeholder="Add new task">
+            <button id="add-task">Add Task</button>
+            <ul id="task-list"></ul>
+        </div>
+        <div id="settings">
+            <h2>Settings</h2>
+            <label for="work-duration">Work Duration (minutes):</label>
+            <input type="number" id="work-duration" value="25">
+            <label for="short-break-duration">Short Break Duration (minutes):</label>
+            <input type="number" id="short-break-duration" value="5">
+            <label for="long-break-duration">Long Break Duration (minutes):</label>
+            <input type="number" id="long-break-duration" value="15">
+            <button id="save-settings">Save Settings</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
 </body>
 </html>
