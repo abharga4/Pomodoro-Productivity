@@ -1,20 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "Pomodoro Productivity",
+  "name": "Pomodoro Extension",
   "version": "1.0",
-  "description": "Manage your time effectively using the Pomodoro Technique.",
-  "permissions": ["storage", "notifications"],
+  "description": "A Pomodoro Timer with task management, dark mode, and customizable settings.",
+  "permissions": ["storage"],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
+	"default_popup": "popup.html",
+	"default_icon": {
+  	"16": "icons/icon16.png",
+  	"48": "icons/icon48.png",
+  	"128": "icons/icon128.png"
+	}
   },
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png",
+	"16": "icons/icon16.png",
+	"48": "icons/icon48.png",
+	"128": "icons/icon128.png"
   }
 }
+
